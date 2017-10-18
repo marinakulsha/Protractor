@@ -8,9 +8,11 @@ exports.config = {
     },
 
     onPrepare: function(){
-        browser.driver.manage().window().setSize(1000,600);
+        browser.ignoreSynchronization = true;
+        browser.driver.manage().window().maximize();
     },
-    jasmineNodeOpts:{
-        showColor:true
+       jasmineNodeOpts:{
+        showColor:true,
+        defaultTimeoutInterval: 120000
     }
 };
